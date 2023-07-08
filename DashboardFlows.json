@@ -1,0 +1,1145 @@
+[
+    {
+        "id": "cc574b3dbe4e9165",
+        "type": "tab",
+        "label": "Autonomousdriving",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "77a7d8ccd911eda7",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "TL06",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "c1cc648e1a6422d9",
+                "9c4ad19ff937fc2e",
+                "9baee359d9c31aa2",
+                "c3ca6eea584a35b7"
+            ]
+        ]
+    },
+    {
+        "id": "c1cc648e1a6422d9",
+        "type": "ui_led",
+        "z": "cc574b3dbe4e9165",
+        "order": 1,
+        "group": "327fef98.9eb9d",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "redyellow",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "RED LED",
+        "x": 300,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9c4ad19ff937fc2e",
+        "type": "ui_led",
+        "z": "cc574b3dbe4e9165",
+        "order": 2,
+        "group": "327fef98.9eb9d",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffff00",
+                "value": "yellow",
+                "valueType": "str"
+            },
+            {
+                "color": "#ffff00",
+                "value": "redyellow",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "YELLOW LED",
+        "x": 320,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9baee359d9c31aa2",
+        "type": "ui_led",
+        "z": "cc574b3dbe4e9165",
+        "order": 3,
+        "group": "327fef98.9eb9d",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "GREEN LED",
+        "x": 310,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8e64d5523701b039",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/mode",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "rh": "0",
+        "inputs": 0,
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "a980db2c6b0936af"
+            ]
+        ]
+    },
+    {
+        "id": "a980db2c6b0936af",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "ec17bf76.9d2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "mode",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 390,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "653aa96860ee301c",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/speed",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "rh": "0",
+        "inputs": 0,
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "2d056cd9dd79e7d7"
+            ]
+        ]
+    },
+    {
+        "id": "96693414028291dc",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/steer",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "rh": "0",
+        "inputs": 0,
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "0f9073a6b7fbe634"
+            ]
+        ]
+    },
+    {
+        "id": "5dfbd0d698c44da6",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/campan",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 160,
+        "y": 680,
+        "wires": [
+            [
+                "127f07251a8c94f8"
+            ]
+        ]
+    },
+    {
+        "id": "2d056cd9dd79e7d7",
+        "type": "ui_gauge",
+        "z": "cc574b3dbe4e9165",
+        "name": "speed",
+        "group": "295aeef4.a36242",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "speed",
+        "label": "increments",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "120",
+        "colors": [
+            "#ff0000",
+            "#00ff00",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "2d9af7a91a52378c",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/camtilt",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 150,
+        "y": 740,
+        "wires": [
+            [
+                "f3b63f42cfc69b97"
+            ]
+        ]
+    },
+    {
+        "id": "0f9073a6b7fbe634",
+        "type": "ui_slider",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "label": "steer",
+        "tooltip": "",
+        "group": "295aeef4.a36242",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "50",
+        "max": "140",
+        "step": 1,
+        "className": "",
+        "x": 390,
+        "y": 620,
+        "wires": [
+            [
+                "294741c96a0e0a47"
+            ]
+        ]
+    },
+    {
+        "id": "127f07251a8c94f8",
+        "type": "ui_slider",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "label": "campan",
+        "tooltip": "",
+        "group": "295aeef4.a36242",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "45",
+        "max": "135",
+        "step": 1,
+        "x": 400,
+        "y": 680,
+        "wires": [
+            [
+                "97df1d47e6e4c5f0"
+            ]
+        ]
+    },
+    {
+        "id": "f3b63f42cfc69b97",
+        "type": "ui_slider",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "label": "camtilt",
+        "tooltip": "",
+        "group": "295aeef4.a36242",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "70",
+        "max": "135",
+        "step": 1,
+        "className": "",
+        "x": 390,
+        "y": 740,
+        "wires": [
+            [
+                "d8b028b4b299c163"
+            ]
+        ]
+    },
+    {
+        "id": "d8b028b4b299c163",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "295aeef4.a36242",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "camtilt value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "97df1d47e6e4c5f0",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "295aeef4.a36242",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "campan value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 600,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "294741c96a0e0a47",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "295aeef4.a36242",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "steer value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "292f2aa3a9a0fabc",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "ec17bf76.9d2",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "LANEDETECT",
+        "tooltip": "Starts driving autonomously",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-car",
+        "payload": "lanedetection",
+        "payloadType": "str",
+        "topic": "PICAR_control/mode",
+        "topicType": "msg",
+        "x": 980,
+        "y": 340,
+        "wires": [
+            [
+                "cc59d77c249b1621"
+            ]
+        ]
+    },
+    {
+        "id": "cc59d77c249b1621",
+        "type": "mqtt out",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_control/mode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "52c19ee.ce6ece",
+        "x": 1320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c3ca6eea584a35b7",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "327fef98.9eb9d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Number",
+        "format": "{{msg.topic}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 300,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f5b2542824398cfb",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "ec17bf76.9d2",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "TL MQTT",
+        "tooltip": "Stops driving autonomously with respect to traffic light",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "mi-traffic",
+        "payload": "tlviamqtt",
+        "payloadType": "str",
+        "topic": "PICAR_control/mode",
+        "topicType": "msg",
+        "x": 960,
+        "y": 400,
+        "wires": [
+            [
+                "cc59d77c249b1621"
+            ]
+        ]
+    },
+    {
+        "id": "915ef7a04893563a",
+        "type": "tcp in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "50007",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 680,
+        "y": 80,
+        "wires": [
+            [
+                "e9173acf5d988d39"
+            ]
+        ]
+    },
+    {
+        "id": "e9173acf5d988d39",
+        "type": "ui_template",
+        "z": "cc574b3dbe4e9165",
+        "group": "ec17bf76.9d2",
+        "name": "Video feed over TCP",
+        "order": 4,
+        "width": "8",
+        "height": "6",
+        "format": "<img width=\"30\" height=\"30\" src= \"{{msg.payload}}\" width=\"100%\" alt='No video feed received'  />",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e4138e2dcb8e7b9",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "ec17bf76.9d2",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Start Delivery",
+        "tooltip": "Stops driving autonomously with respect to traffic light detected with CNN",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-truck ",
+        "payload": "start_delivery",
+        "payloadType": "str",
+        "topic": "PICAR_control/mode",
+        "topicType": "msg",
+        "x": 980,
+        "y": 460,
+        "wires": [
+            [
+                "cc59d77c249b1621"
+            ]
+        ]
+    },
+    {
+        "id": "51aa5b3cb5f54d6c",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "ec17bf76.9d2",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "STOP",
+        "tooltip": "Stops driving autonomously",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-stop ",
+        "payload": "standby",
+        "payloadType": "str",
+        "topic": "PICAR_control/mode",
+        "topicType": "msg",
+        "x": 870,
+        "y": 580,
+        "wires": [
+            [
+                "cc59d77c249b1621"
+            ]
+        ]
+    },
+    {
+        "id": "961f76e5a64e1e2b",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "327fef98.9eb9d",
+        "order": 10,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "RED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "red",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "2d5a6193c517de77"
+            ]
+        ]
+    },
+    {
+        "id": "0f37821f7b744bef",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "327fef98.9eb9d",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "R/Y",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "orange",
+        "className": "",
+        "icon": "",
+        "payload": "redyellow",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "2d5a6193c517de77"
+            ]
+        ]
+    },
+    {
+        "id": "465714bbb6e15220",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "327fef98.9eb9d",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "GREEN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "green",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "2d5a6193c517de77"
+            ]
+        ]
+    },
+    {
+        "id": "dc6255a53f04a3ad",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "327fef98.9eb9d",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "YELLOW",
+        "tooltip": "",
+        "color": "black",
+        "bgcolor": "yellow",
+        "className": "",
+        "icon": "",
+        "payload": "yellow",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "2d5a6193c517de77"
+            ]
+        ]
+    },
+    {
+        "id": "2d5a6193c517de77",
+        "type": "mqtt out",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "TL06ctrl",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "52c19ee.ce6ece",
+        "x": 940,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4647ca1ba764a2a4",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "TL06mode",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "24ce81f0de0b14af"
+            ]
+        ]
+    },
+    {
+        "id": "24ce81f0de0b14af",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "327fef98.9eb9d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 450,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "29ab491bf0c28320",
+        "type": "ui_text",
+        "z": "cc574b3dbe4e9165",
+        "group": "327fef98.9eb9d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "tlphase_car",
+        "label": "Car detected",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 410,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f128964696470bc5",
+        "type": "mqtt in",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "topic": "SMARTCAR_status/tlphase",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "52c19ee.ce6ece",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "29ab491bf0c28320"
+            ]
+        ]
+    },
+    {
+        "id": "40ea2f6f3b560071",
+        "type": "inject",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 910,
+        "y": 700,
+        "wires": [
+            [
+                "1e1714faa3bc7935"
+            ]
+        ]
+    },
+    {
+        "id": "d82bf4d61cb6f3b2",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "d3536506cb9fe564",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh ",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 885.5,
+        "y": 1071.75,
+        "wires": [
+            [
+                "c4f5d73ad2d2ba98"
+            ]
+        ]
+    },
+    {
+        "id": "c4f5d73ad2d2ba98",
+        "type": "exec",
+        "z": "cc574b3dbe4e9165",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Reboot",
+        "x": 1103.5,
+        "y": 1071.75,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9481769ba18b5547",
+        "type": "ui_button",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "d3536506cb9fe564",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shutdown",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-power-off",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 894,
+        "y": 1116,
+        "wires": [
+            [
+                "e407ee8f52a6107c"
+            ]
+        ]
+    },
+    {
+        "id": "e407ee8f52a6107c",
+        "type": "exec",
+        "z": "cc574b3dbe4e9165",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Shutdown",
+        "x": 1115,
+        "y": 1134,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1e1714faa3bc7935",
+        "type": "exec",
+        "z": "cc574b3dbe4e9165",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "CPU Load",
+        "x": 1115.5,
+        "y": 771.75,
+        "wires": [
+            [
+                "1ec691187f27555f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1ec691187f27555f",
+        "type": "ui_gauge",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "4b3d2b15b1931e84",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Processor",
+        "label": "CPU",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1475.5,
+        "y": 771.75,
+        "wires": []
+    },
+    {
+        "id": "d3c5e7aeaece4d7a",
+        "type": "exec",
+        "z": "cc574b3dbe4e9165",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Disk Usage",
+        "x": 1115.5,
+        "y": 931.75,
+        "wires": [
+            [
+                "cda919131704940c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "721464892bc7b1ac",
+        "type": "ui_gauge",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "group": "4b3d2b15b1931e84",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Disk",
+        "label": "Usage",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1475.5,
+        "y": 931.75,
+        "wires": []
+    },
+    {
+        "id": "cda919131704940c",
+        "type": "function",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1295.5,
+        "y": 931.75,
+        "wires": [
+            [
+                "721464892bc7b1ac"
+            ]
+        ]
+    },
+    {
+        "id": "9c23e1509ab0a0f9",
+        "type": "inject",
+        "z": "cc574b3dbe4e9165",
+        "name": "",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 915.5,
+        "y": 931.75,
+        "wires": [
+            [
+                "d3c5e7aeaece4d7a"
+            ]
+        ]
+    },
+    {
+        "id": "52c19ee.ce6ece",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "327fef98.9eb9d",
+        "type": "ui_group",
+        "name": "Traffic light",
+        "tab": "75bbd5c8.27617c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ec17bf76.9d2",
+        "type": "ui_group",
+        "name": "Smart Truck control",
+        "tab": "75bbd5c8.27617c",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "295aeef4.a36242",
+        "type": "ui_group",
+        "name": "Smart Truck status",
+        "tab": "75bbd5c8.27617c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3536506cb9fe564",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "48f2f3b88aae7a2f",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "4b3d2b15b1931e84",
+        "type": "ui_group",
+        "name": "Truck extra parameters",
+        "tab": "48f2f3b88aae7a2f",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "75bbd5c8.27617c",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "mi-home",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "48f2f3b88aae7a2f",
+        "type": "ui_tab",
+        "name": "Truck Remote Control",
+        "icon": "mi-settings_remote",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
